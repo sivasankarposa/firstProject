@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220309 05:56:42.659" rpa="false" schemaversion="2">
+<suite id="s1" name="Second" source="C:\Users\siva sankar\PycharmProjects\firstProject\second">
+<suite id="s1-s1" name="Customlibrary" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\customlibrary.robot">
+<test id="s1-s1-t1" name="validate card display in the shopping page">
+<kw name="open the browser with the Mortgage payment url" library="ShopPage" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:\\Users\\siva sankar\\Downloads\\chromedriver_win32\\chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220309 05:56:50.617" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220309 05:56:50.617" endtime="20220309 05:57:35.333"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 05:57:35.333" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise'</msg>
+<status status="PASS" starttime="20220309 05:57:35.333" endtime="20220309 05:57:39.293"/>
+</kw>
+<status status="PASS" starttime="20220309 05:56:50.617" endtime="20220309 05:57:39.293"/>
+</kw>
+<kw name="Fill the login Form" library="LandingPage">
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 05:57:39.295" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20220309 05:57:39.295" endtime="20220309 05:57:40.304"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 05:57:40.304" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20220309 05:57:40.352" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220309 05:57:40.436" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220309 05:57:40.304" endtime="20220309 05:57:40.436"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 05:57:40.436" level="INFO">Clicking button 'signInBtn'.</msg>
+<status status="PASS" starttime="20220309 05:57:40.436" endtime="20220309 05:57:40.515"/>
+</kw>
+<status status="PASS" starttime="20220309 05:57:39.295" endtime="20220309 05:57:40.515"/>
+</kw>
+<kw name="wait untill element is visible is located in the page" library="ShopPage">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${shop_page_load}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220309 05:57:57.989" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.51)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003569A3+2582947]
+	Ordinal0 [0x002EA6D1+2139857]
+	Ordinal0 [0x001E3A98+1063576]
+	Ordinal0 [0x001CC440+967744]
+	Ordinal0 [0x0022AD09+1355017]
+	Ordinal0 [0x00237AD2+1407698]
+	Ordinal0 [0x00228366+1344358]
+	Ordinal0 [0x00205176+1200502]
+	Ordinal0 [0x00206066+1204326]
+	GetHandleVerifier [0x004FBE02+1675858]
+	GetHandleVerifier [0x005B036C+2414524]
+	GetHandleVerifier [0x003EBB01+560977]
+	GetHandleVerifier [0x003EA8D3+556323]
+	Ordinal0 [0x002F020E+2163214]
+	Ordinal0 [0x002F5078+2183288]
+	Ordinal0 [0x002F51C0+2183616]
+	Ordinal0 [0x002FEE1C+2223644]
+	BaseThreadInitThunk [0x757CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+	(No symbol) [0x00000000]
+</msg>
+<msg timestamp="20220309 05:57:58.743" level="FAIL">Element 'css:.nav-link' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220309 05:57:40.515" endtime="20220309 05:57:58.743"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:57:40.515" endtime="20220309 05:57:58.745"/>
+</kw>
+<kw name="verify card title in the shop page" library="ShopPage">
+<status status="NOT RUN" starttime="20220309 05:57:58.747" endtime="20220309 05:57:58.748"/>
+</kw>
+<kw name="Helloworld" library="Shop">
+<status status="NOT RUN" starttime="20220309 05:57:58.748" endtime="20220309 05:57:58.748"/>
+</kw>
+<kw name="Add Items To Cart And Checkout" library="Shop">
+<arg>${listofproducts}</arg>
+<status status="NOT RUN" starttime="20220309 05:57:58.749" endtime="20220309 05:57:58.749"/>
+</kw>
+<kw name="verfy items in the checkout page and proceed" library="Checkout">
+<status status="NOT RUN" starttime="20220309 05:57:58.750" endtime="20220309 05:57:58.750"/>
+</kw>
+<kw name="ConfirmationPage.Enter your country">
+<arg>${country_name}</arg>
+<status status="NOT RUN" starttime="20220309 05:57:58.756" endtime="20220309 05:57:58.756"/>
+</kw>
+<kw name="ConfirmationPage.purchasing the item">
+<status status="NOT RUN" starttime="20220309 05:57:58.761" endtime="20220309 05:57:58.761"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:56:50.617" endtime="20220309 05:57:58.761">Element 'css:.nav-link' not visible after 5 seconds.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220309 05:56:42.750" endtime="20220309 05:57:58.763"/>
+</suite>
+<suite id="s1-s2" name="First" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\first.robot">
+<test id="s1-s2-t1" name="LoginTest">
+<kw name="open the browser with the Mortgage payment url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:\\Users\\siva sankar\\Downloads\\chromedriver_win32\\chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220309 05:57:58.890" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220309 05:57:58.890" endtime="20220309 05:58:32.356"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://rahulshettyacademy.com/loginpagePractise</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220309 05:58:32.356" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise'</msg>
+<status status="PASS" starttime="20220309 05:58:32.356" endtime="20220309 05:58:43.532"/>
+</kw>
+<status status="PASS" starttime="20220309 05:57:58.890" endtime="20220309 05:58:43.532"/>
+</kw>
+<kw name="Fill the login Form">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>sivasankar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 05:58:43.532" level="INFO">Typing text 'sivasankar' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20220309 05:58:43.532" endtime="20220309 05:58:43.998"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>sivasankar</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220309 05:58:43.998" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20220309 05:58:44.034" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220309 05:58:44.115" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220309 05:58:43.998" endtime="20220309 05:58:44.115"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220309 05:58:44.115" level="INFO">Clicking button 'signInBtn'.</msg>
+<status status="PASS" starttime="20220309 05:58:44.115" endtime="20220309 05:58:44.296"/>
+</kw>
+<status status="PASS" starttime="20220309 05:58:43.532" endtime="20220309 05:58:44.296"/>
+</kw>
+<kw name="wait untill it checks and display error message">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${error_message}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220309 05:58:44.296" endtime="20220309 05:58:46.372"/>
+</kw>
+<status status="PASS" starttime="20220309 05:58:44.296" endtime="20220309 05:58:46.372"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${error_message}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220309 05:58:46.372" level="INFO">Verifying element 'css:div[class='alert alert-danger col-md-12']' contains exact text 'Incorrect username/password.'.</msg>
+<status status="PASS" starttime="20220309 05:58:46.372" endtime="20220309 05:58:46.395"/>
+</kw>
+<status status="PASS" starttime="20220309 05:58:46.372" endtime="20220309 05:58:46.395"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220309 05:58:46.395" endtime="20220309 05:58:53.786"/>
+</kw>
+<status status="PASS" starttime="20220309 05:57:58.889" endtime="20220309 05:58:53.787"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" starttime="20220309 05:57:58.765" endtime="20220309 05:58:53.789"/>
+</suite>
+<suite id="s1-s3" name="firstCopy" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\firstCopy.robot">
+<test id="s1-s3-t1" name="validate card display in the shopping page">
+<kw name="open the browser with the Mortgage payment url" type="SETUP">
+<msg timestamp="20220309 05:58:53.796" level="FAIL">No keyword with name 'open the browser with the Mortgage payment url' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.796" endtime="20220309 05:58:53.796"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.796" endtime="20220309 05:58:53.796">Setup failed:
+No keyword with name 'open the browser with the Mortgage payment url' found.</status>
+</test>
+<test id="s1-s3-t2" name="select the form and navigate to childwindow">
+<kw name="open the browser with the Mortgage payment url" type="SETUP">
+<msg timestamp="20220309 05:58:53.796" level="FAIL">No keyword with name 'open the browser with the Mortgage payment url' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.796" endtime="20220309 05:58:53.796"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.796" endtime="20220309 05:58:53.796">Setup failed:
+No keyword with name 'open the browser with the Mortgage payment url' found.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220309 05:58:53.789" endtime="20220309 05:58:53.796"/>
+</suite>
+<suite id="s1-s4" name="Parameterization" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\parameterization.robot">
+<test id="s1-s4-t1" name="invalid username">
+<kw name="LoginTest #for parameterization puropose">
+<arg>siavsankar</arg>
+<arg>12345678</arg>
+<msg timestamp="20220309 05:58:53.812" level="FAIL">No keyword with name 'LoginTest #for parameterization puropose' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812">No keyword with name 'LoginTest #for parameterization puropose' found.</status>
+</test>
+<test id="s1-s4-t2" name="invalid password">
+<kw name="LoginTest #for parameterization puropose">
+<arg>rahulshetty</arg>
+<arg>sivasankar</arg>
+<msg timestamp="20220309 05:58:53.812" level="FAIL">No keyword with name 'LoginTest #for parameterization puropose' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.812">No keyword with name 'LoginTest #for parameterization puropose' found.</status>
+</test>
+<test id="s1-s4-t3" name="speacial cvahracters">
+<kw name="LoginTest #for parameterization puropose">
+<arg>@#@#</arg>
+<arg>learning</arg>
+<msg timestamp="20220309 05:58:53.828" level="FAIL">No keyword with name 'LoginTest #for parameterization puropose' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.828" endtime="20220309 05:58:53.828"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220309 05:58:53.828" endtime="20220309 05:58:53.828"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.812" endtime="20220309 05:58:53.828">No keyword with name 'LoginTest #for parameterization puropose' found.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220309 05:58:53.796" endtime="20220309 05:58:53.828"/>
+</suite>
+<suite id="s1-s5" name="Practice" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\practice.robot">
+<test id="s1-s5-t1" name="Login Test">
+<kw name="opening the browser with required url">
+<msg timestamp="20220309 05:58:53.828" level="FAIL">No keyword with name 'opening the browser with required url' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:53.828" endtime="20220309 05:58:53.828"/>
+</kw>
+<kw name="filling up the login form">
+<arg>${user_name}</arg>
+<arg>${valid_password}</arg>
+<status status="NOT RUN" starttime="20220309 05:58:53.844" endtime="20220309 05:58:53.844"/>
+</kw>
+<kw name="displaying error message">
+<status status="NOT RUN" starttime="20220309 05:58:53.844" endtime="20220309 05:58:53.844"/>
+</kw>
+<kw name="checking the error message">
+<status status="NOT RUN" starttime="20220309 05:58:53.844" endtime="20220309 05:58:53.844"/>
+</kw>
+<kw name="verify card title in the login page">
+<status status="NOT RUN" starttime="20220309 05:58:53.844" endtime="20220309 05:58:53.844"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.828" endtime="20220309 05:58:53.844">No keyword with name 'opening the browser with required url' found.</status>
+</test>
+<doc>filling up the login page</doc>
+<status status="FAIL" starttime="20220309 05:58:53.828" endtime="20220309 05:58:53.844"/>
+</suite>
+<suite id="s1-s6" name="Praveen" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\praveen.robot">
+<test id="s1-s6-t1" name="google">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220309 05:58:53.844" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<msg timestamp="20220309 05:58:54.837" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220309 05:58:56.210" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220309 05:58:53.844" endtime="20220309 05:58:56.210"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:53.844" endtime="20220309 05:58:56.210">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<status status="FAIL" starttime="20220309 05:58:53.844" endtime="20220309 05:58:56.210"/>
+</suite>
+<suite id="s1-s7" name="Third" source="C:\Users\siva sankar\PycharmProjects\firstProject\second\third.robot">
+<test id="s1-s7-t1" name="validate child window functionality">
+<kw name="open the browser with the Mortgage payment url" type="SETUP">
+<msg timestamp="20220309 05:58:56.622" level="FAIL">No keyword with name 'open the browser with the Mortgage payment url' found.</msg>
+<status status="FAIL" starttime="20220309 05:58:56.622" endtime="20220309 05:58:56.622"/>
+</kw>
+<status status="FAIL" starttime="20220309 05:58:56.622" endtime="20220309 05:58:56.622">Setup failed:
+No keyword with name 'open the browser with the Mortgage payment url' found.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20220309 05:58:56.210" endtime="20220309 05:58:56.622"/>
+</suite>
+<status status="FAIL" starttime="20220309 05:56:42.659" endtime="20220309 05:58:56.622"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="9" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="9" skip="0" id="s1" name="Second">Second</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Customlibrary">Second.Customlibrary</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="First">Second.First</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s3" name="firstCopy">Second.firstCopy</stat>
+<stat pass="0" fail="3" skip="0" id="s1-s4" name="Parameterization">Second.Parameterization</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s5" name="Practice">Second.Practice</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s6" name="Praveen">Second.Praveen</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s7" name="Third">Second.Third</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220309 05:56:50.617" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\customlibrary.robot' on line 15: Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\PageObject\ConfirmationPage.robot' on line 24: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220309 05:57:57.989" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=99.0.4844.51)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x003569A3+2582947]
+	Ordinal0 [0x002EA6D1+2139857]
+	Ordinal0 [0x001E3A98+1063576]
+	Ordinal0 [0x001CC440+967744]
+	Ordinal0 [0x0022AD09+1355017]
+	Ordinal0 [0x00237AD2+1407698]
+	Ordinal0 [0x00228366+1344358]
+	Ordinal0 [0x00205176+1200502]
+	Ordinal0 [0x00206066+1204326]
+	GetHandleVerifier [0x004FBE02+1675858]
+	GetHandleVerifier [0x005B036C+2414524]
+	GetHandleVerifier [0x003EBB01+560977]
+	GetHandleVerifier [0x003EA8D3+556323]
+	Ordinal0 [0x002F020E+2163214]
+	Ordinal0 [0x002F5078+2183288]
+	Ordinal0 [0x002F51C0+2183616]
+	Ordinal0 [0x002FEE1C+2223644]
+	BaseThreadInitThunk [0x757CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+	(No symbol) [0x00000000]
+</msg>
+<msg timestamp="20220309 05:58:53.789" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\firstCopy.robot' on line 12: Setting variable '@{}' failed: Invalid variable name '@{}'.</msg>
+<msg timestamp="20220309 05:58:53.796" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\firstCopy.robot' on line 7: Resource file 'resource.robot' does not exist.</msg>
+<msg timestamp="20220309 05:58:53.828" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\practice.robot' on line 4: Resource file 'resource.robot' does not exist.</msg>
+<msg timestamp="20220309 05:58:56.248" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\third.robot' on line 5: Resource file 'resource.robot' does not exist.</msg>
+<msg timestamp="20220309 05:58:56.622" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\third.robot' on line 6: Importing library 'String # mandatory for using the split string' failed: ModuleNotFoundError: No module named 'String # mandatory for using the split string'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\siva sankar\PycharmProjects\firstProject\venv\Scripts\robot.exe
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310
+  c:\users\siva sankar\pycharmprojects\firstproject\venv
+  c:\users\siva sankar\pycharmprojects\firstproject\venv\lib\site-packages</msg>
+<msg timestamp="20220309 05:58:56.622" level="ERROR">Error in file 'C:\Users\siva sankar\PycharmProjects\firstProject\second\third.robot' on line 7: Importing library 'Collections #mandatory for get from list' failed: ModuleNotFoundError: No module named 'Collections #mandatory for get from list'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\siva sankar\PycharmProjects\firstProject\venv\Scripts\robot.exe
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\siva sankar\AppData\Local\Programs\Python\Python310
+  c:\users\siva sankar\pycharmprojects\firstproject\venv
+  c:\users\siva sankar\pycharmprojects\firstproject\venv\lib\site-packages</msg>
+</errors>
+</robot>
